@@ -1,0 +1,21 @@
+version: 0.0
+os: linux
+files:
+  - source: target/java-tomcat-maven-example.war
+    destination: /opt/apache-tomcat-9.0.35/webapps/
+permissions: 
+  - object: / 
+    pattern: "**" 
+    mode: 755
+    owner: tomcat 
+    group: tomcat
+hooks:
+  ApplicationStop:
+    - location: java-tomcat-sample/scripts/stop_server.sh
+      timeout: 300
+      runas: root
+
+  ApplicationStart:
+    - location: java-tomcat-samplescripts/start_server.sh
+      timeout: 300
+      runas: root
