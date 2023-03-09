@@ -16,6 +16,6 @@ hooks:
       runas: root
 
   ApplicationStart:
-    - location: java-tomcat-samplescripts/start_server.sh
+    - location: java-tomcat-sample/scripts/start_server.sh
       timeout: 300
       runas: root
