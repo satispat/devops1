@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: target/java-tomcat-maven-example.war
-    destination: /opt/apache-tomcat-9.0.35/webapps/
+  - source: /target/java-tomcat-maven-example.war
+    destination: /opt/apache-tomcat-9.0.35/webapps
 permissions: 
   - object: / 
     pattern: "**" 
