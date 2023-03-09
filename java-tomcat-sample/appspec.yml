@@ -3,6 +3,7 @@ os: linux
 files:
   - source: /target/java-tomcat-maven-example.war
     destination: /opt/apache-tomcat-9.0.35/webapps
+    overwrite: true
 permissions: 
   - object: / 
     pattern: "**" 
