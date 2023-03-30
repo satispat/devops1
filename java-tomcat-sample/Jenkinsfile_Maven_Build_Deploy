@@ -58,5 +58,8 @@ pipeline {
         always {
             archiveArtifacts artifacts: '**/*.war', fingerprint: true
         }
+        success {
+            mail bcc: '', body: 'Continuous Integration has been successfull', cc: 'suhashelave526@gmail.com', from: '', replyTo: '', subject: 'CI succeed', to: 'patilsatish8055@gmail.com'
+        }
     }
 }
